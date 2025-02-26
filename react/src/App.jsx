@@ -1,14 +1,19 @@
 /* eslint-disable */
-import React ,{ useState } from 'react'
-import reactLogo from './assets/react.svg'
+import React ,{ useEffect, useState } from "react";
+import Home from "./Home.jsx"
+import { Routes , Route } from "react-router";
+import Navbar from "./navbar.jsx";
 
-function App() {
+export default function HomePage() {
+
 
   return (
     <>
-      <h1 className="text-8xl font-thin">العاصمة الإدارية الجديدة</h1>
-    </>
-  )
-}
 
-export default App
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+      </Routes>
+    </>
+  );
+}
