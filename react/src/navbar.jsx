@@ -39,7 +39,7 @@ function Navbar() {
                 <Link><h1 className='font-medium text-white text-xl hover:text-[#c79801] cursor-pointer transition-all'>التكنولوجيا</h1></Link>
                 <Link><h1 className='font-medium text-white text-xl hover:text-[#c79801] cursor-pointer transition-all'>المشاريع</h1></Link>
             </div>
-            <img src={mySvg} className='w-10 cursor-pointer' />
+            <img src={mySvg} className='w-13 cursor-pointer' />
         </div>
     </>
     );
