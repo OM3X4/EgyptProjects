@@ -5,18 +5,19 @@ import React , {useState , useEffect , useRef} from 'react';
 import Data from './Data/Projects.json'
 import { useSearchParams } from 'react-router';
 import MapComponent from "./map.jsx"
-import { keyframes } from 'framer-motion';
 
 function Project() {
 
     const [searchParams] = useSearchParams()
     const [data , setData] = useState(1)
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    } , [])
 
     useEffect(() => {
         const currentPro = searchParams.get("id");
         setData(Data.filter(item => item.ID == currentPro)[0]);
-
 
     } , [])
 
@@ -28,7 +29,6 @@ function Project() {
     return (
     <>
         <div className="relative h-screen w-screen bg-gray-900 flex items-end justify-end snap-start">
-            {/* Video Wrapper with AOS Animation */}
             <div
                 className="absolute inset-0 w-screen h-screen brightness-50 pointer-events-none"
                 data-aos="zoom-out-up"
@@ -56,7 +56,7 @@ function Project() {
 
         <section className="h-[calc(100vh-7rem)] flex items-center pt-20 flex-col gap-10 bg-amber-50">
             {
-                ["Tourism" , "Army" ,"Public Service" , "Energy" , "Cities" , "Infrastructure"].includes(data.Category) ?
+                ["Tourism" , "Army" ,"Public Service" , "Energy" , "Cities" , "Infrasturcture"].includes(data.Category) ?
                 <img src={`public/Images/Symbols/${data.Category}.svg`} className="w-40" />:
                 <img src="public\Images\Symbols\Falcon.svg" className="w-20" />
             }
@@ -75,8 +75,6 @@ function Project() {
                 {/* 🔹 Background Image */}
                 <div
                     className="absolute inset-0 w-screen h-screen brightness-[0.7] pointer-events-none object-cover z-0"
-                    data-aos="zoom-out-up"
-                    data-aos-delay="300"
                 >
                     <img
                         src={`public/Images/Home/IsoBarsBlack.png`}
@@ -86,7 +84,7 @@ function Project() {
                 </div>
 
                 {/* 🔹 Content Wrapper */}
-                <div className='relative h-full flex items-end px-40 justify-center flex-col z-40 gap-10'>
+                <div className='relative h-full flex items-end px-40 justify-center flex-col z-40 gap-10' data-aos="fade-up">
                     {
                         data.KeyFeatures.map((item, index) => {
                             return (

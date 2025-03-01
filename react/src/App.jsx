@@ -9,8 +9,11 @@ import { Routes , Route } from "react-router";
 import Navbar from "./navbar.jsx";
 import Projects from "./Projects.jsx";
 import Project from "./Project.jsx";
+import ProjectsLinear from "./ProjectsLinear.jsx";
 
 export default function HomePage() {
+
+
 
 
   return (
@@ -19,7 +22,7 @@ export default function HomePage() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/projects" element={<Projects />}/>
+        <Route path="/projects" element={<ProjectsLinear />}/>
         <Route path="/project" element={<Project />}/>
       </Routes>
       <section className="flex items-center justify-around h-28 bg-gray-800 flex-row-reverse">

@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { BiPlay } from "react-icons/bi";
 import React, { useEffect } from 'react';
 import myVideo from "../public/Images/0227.mp4"
 import Aos from 'aos';
@@ -6,7 +7,12 @@ import "aos/dist/aos.css"; // Import AOS styles
 import  Counter  from "./Counter";
 import Reveal from "./Reveal";
 
+
 function Home() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    } , [])
 
     useEffect(() => {
         Aos.init({
