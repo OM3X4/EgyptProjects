@@ -15,17 +15,18 @@ function ProjectsLinear() {
     const [currentData , setCurrentData] = useState([]);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         if(searchParams.get("Cat")){
             console.log(searchParams.get("Cat"))
             const dt = Data.filter((item) => {
                 return item.Category == searchParams.get("Cat");
             })
-
+            console.log(searchParams.get("Cat"))
             setCurrentData(dt);
         }else{
             setCurrentData(Data);
         }
-    } , [])
+    } , [searchParams])
 
     useEffect(() => {
         console.log(currentData)
@@ -45,9 +46,9 @@ function ProjectsLinear() {
                     return(
                         <Link to={`/project?id=${item.ID}`}>
                             <div className=' group'>
-                                <div className="h-[40vh] w-full overflow-hidden transition-all group-hover:h-[45vh]">
+                                <div className="h-[40vh] w-full overflow-hidden transition-all group-hover:h-[50vh] ease-out">
                                     <img
-                                        src={`public/Images/${item.ID}.jpg`}
+                                        src={`/Images/${item.ID}.jpg`}
                                         className="w-full h-full object-cover object-center"
                                         alt="Image"
                                     />

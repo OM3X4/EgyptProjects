@@ -35,7 +35,7 @@ function Project() {
                 data-aos-delay="300"
             >
                 <img
-                    src={`public/Images/${data.ID}.jpg`}
+                    src={`/Images/${data.ID}.jpg`}
                     className="w-full h-full object-cover object-center"
                     alt="Background"
                 />
@@ -57,8 +57,8 @@ function Project() {
         <section className="h-[calc(100vh-7rem)] flex items-center pt-20 flex-col gap-10 bg-amber-50">
             {
                 ["Tourism" , "Army" ,"Public Service" , "Energy" , "Cities" , "Infrasturcture"].includes(data.Category) ?
-                <img src={`public/Images/Symbols/${data.Category}.svg`} className="w-40" />:
-                <img src="public\Images\Symbols\Falcon.svg" className="w-20" />
+                <img src={`/Images/Symbols/${data.Category}.svg`} className="w-40" />:
+                <img src="\Images\Symbols\Falcon.svg" className="w-20" />
             }
             <p className="text-3xl max-w-[80%] text-center font-normal">
                 {data.overview}
@@ -77,7 +77,7 @@ function Project() {
                     className="absolute inset-0 w-screen h-screen brightness-[0.7] pointer-events-none object-cover z-0"
                 >
                     <img
-                        src={`public/Images/Home/IsoBarsBlack.png`}
+                        src={`/Images/Home/IsoBarsBlack.png`}
                         className="w-full h-full object-cover object-center"
                         alt="Background"
                     />

@@ -1,11 +1,10 @@
 /* eslint-disable */
 import { BiPlay } from "react-icons/bi";
 import React, { useEffect } from 'react';
-import myVideo from "../public/Images/0227.mp4"
 import Aos from 'aos';
 import "aos/dist/aos.css"; // Import AOS styles
 import  Counter  from "./Counter";
-import Reveal from "./Reveal";
+import { Link } from "react-router"
 
 
 function Home() {
@@ -33,15 +32,15 @@ function Home() {
                     data-aos-delay="300"
                 >
                     <video autoPlay loop muted className="absolute w-full h-full object-cover">
-                        <source src={myVideo} type="video/mp4" />
+                        <source src={"/Images/0227.webm"} type="video/mp4" />
                     </video>
                 </div>
                 <div className='flex z-40 text-white py-28 mx-14 flex-col gap-8 text-right'>
                     <h1 className='text-7xl font-bold p-2'>العاصمة الإدارية الجديدة</h1>
                     <h1 className='text-2xl'>مستقبل مصر يبدأ من هنا</h1>
                     <div className="flex items-center justify-end gap-10 ">
-                        <button className="bg-white rounded-xl text-black text-2xl px-10 py-3 font-bold hover:text-white hover:bg-black transition-all cursor-pointer">التفاصيل</button>
-                        <button className="rounded-full bg-white text-black flex items-center justify-center text-3xl p-3 hover:text-white hover:bg-black transition-all cursor-pointer"><BiPlay /></button>
+                        <Link to="/project?id=1"><button className="bg-white rounded-xl text-black text-2xl px-10 py-3 font-bold hover:text-white hover:bg-black transition-all cursor-pointer">التفاصيل</button></Link>
+                        <a href="https://youtu.be/W7QQCKEza8w?si=gd7JkJ46tNVgrfOP" target="blank"><button className="rounded-full bg-white text-black flex items-center justify-center text-3xl p-3 hover:text-white hover:bg-black transition-all cursor-pointer"><BiPlay /></button></a>
                     </div>
                 </div>
 
@@ -66,7 +65,7 @@ function Home() {
             </section>
             <section className="h-[calc(100vh-7rem)] flex group relative">
                 <div className="flex-1 h-[calc(100vh-7rem)] overflow-hidden hover:flex-[1.4] transition-all delay-10 relative group/sub" >
-                    <img src="public\Images\Home\Alamain2.jpg"
+                    <img src="\Images\Home\Alamain2.jpg"
                     className="object-cover h-full z-0 brightness-45 blur-[0.6px]  hover:brightness-60 transition-all duration-300 delay-200 hover:scale-105" />
                     <div className="absolute top-20 w-full flex items-end flex-col justify-start gap-10  pointer-events-none brightness-70 group-hover:brightness-100">
                         <div className="flex items-center justify-start mr-20 flex-row-reverse gap-5 opacity-100 group-hover:opacity-0 group-hover/sub:opacity-100 transition-opacity duration-600">
@@ -81,7 +80,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="flex-1 h-[calc(100vh-7rem)] overflow-hidden hover:flex-[1.4] transition-all delay-10 relative group/sub" >
-                    <img src="public\Images\Home\Dab3a2.jpg"
+                    <img src="\Images\Home\Dab3a2.jpg"
                     className="object-cover h-full z-0 brightness-45 blur-[0.6px]  hover:brightness-60 transition-all duration-300 delay-200 hover:scale-105" />
                     <div className="absolute top-20 w-full flex items-end flex-col justify-start gap-10 pointer-events-none brightness-70 group-hover:brightness-100">
                         <div className="flex items-center justify-start mr-20 flex-row-reverse gap-5 opacity-100 group-hover:opacity-0 group-hover/sub:opacity-100 transition-opacity duration-600  brightness-70 group-hover:brightness-100">
@@ -96,7 +95,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="flex-1 h-[calc(100vh-7rem)] overflow-hidden hover:flex-[1.4] transition-all delay-10 relative group/sub" >
-                    <img src="public\Images\Home\Solar2.jpg"
+                    <img src="\Images\Home\Solar2.jpg"
                     className="object-cover h-full z-0 brightness-45 blur-[0.6px]  hover:brightness-60 transition-all duration-300 delay-200 hover:scale-105" />
                     <div className="absolute top-20 w-full flex items-end flex-col justify-start gap-10 pointer-events-none brightness-70 group-hover:brightness-100">
                         <div className="flex items-center justify-start mr-20 flex-row-reverse gap-5 opacity-100 group-hover:opacity-0 group-hover/sub:opacity-100 transition-opacity duration-600  brightness-70 group-hover:brightness-100">
@@ -115,7 +114,7 @@ function Home() {
             </section>
 
             <section className="h-[calc(100vh-7rem)] flex items-center pt-20 flex-col gap-10 bg-amber-50">
-                <img src="public\Images\Home\KeyLogoPNG.png" className="w-20" />
+                <img src="\Images\Home\KeyLogoPNG.png" className="w-20" />
                 <p className="text-3xl max-w-[80%] text-center font-normal">
                     إن «العمل الحثيث والدؤوب في هذه المشروعات في مختلف ربوع الوطن يستهدف تأسيس واقع مصري جديد، يمتاز بارتفاع جودة الحياة، وزيادة فرص العمل  والتنمية للمصريين جميعاً»
                     <p className="font-bold text-4xl mt-5">  الرئيس عبد الفتاح السيسي -</p>
@@ -123,7 +122,7 @@ function Home() {
             </section>
 
             <section className="h-fit relative">
-                <img src="public\Images\Home\Palace1Extended2.png" className=" w-full z-0 brightness-50 blur-[0.7px" />
+                <img src="\Images\Home\Palace1Extended2.png" className=" w-full z-0 brightness-50 blur-[0.7px" />
                 <div className="flex absolute top-30 items-center justify-center w-full flex-col gap-20">
                     <div className="w-[70%] flex items-center justify-around gap-30">
                         <div className="text-center">
